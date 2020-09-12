@@ -2139,10 +2139,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2184,13 +2220,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2220,13 +2256,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="aad-oauth2grant-list">aad oauth2grant list<a class="headerlink" href="#aad-oauth2grant-list" title="Permanent link">&para;</a></h1>
 <p>Lists OAuth2 permission grants for the specified service principal</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>aad oauth2grant list <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 aad oauth2grant list <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8259,7 +8295,7 @@
 <p>When using the text output type (default), the command lists only the values of the <code>objectId</code>, <code>resourceId</code> and <code>scope</code> properties of the OAuth grant. When setting the output type to JSON, all available properties are included in the command output.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>List OAuth2 permissions granted to service principal with <code>objectId</code> <em>b2307a39-e878-458b-bc90-03bc578531d6</em>.</p>
-<div class="codehilite"><pre><span></span>aad oauth2grant list --clientId b2307a39-e878-458b-bc90-03bc578531d6
+<div class="codehilite"><pre><span></span>m365 aad oauth2grant list --clientId b2307a39-e878-458b-bc90-03bc578531d6
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

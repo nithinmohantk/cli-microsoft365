@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8188,7 +8224,7 @@
                 <h1 id="spo-file-get">spo file get<a class="headerlink" href="#spo-file-get" title="Permanent link">&para;</a></h1>
 <p>Gets information about the specified file</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo file get <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo file get <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8252,35 +8288,35 @@
 </table>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Get file properties for file with id (UniqueId) <em>b2307a39-e878-458b-bc90-03bc578531d6</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span>
 </pre></div>
 
 <p>Get contents of the file with id (UniqueId) <em>b2307a39-e878-458b-bc90-03bc578531d6</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asString
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asString
 </pre></div>
 
 <p>Get list item properties for file with id (UniqueId) <em>b2307a39-e878-458b-bc90-03bc578531d6</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asListItem
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asListItem
 </pre></div>
 
 <p>Save file with id (UniqueId) <em>b2307a39-e878-458b-bc90-03bc578531d6</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em> to local file <em>/Users/user/documents/SavedAsTest1.docx</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asFile --path /Users/user/documents/SavedAsTest1.docx
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --id <span class="s1">&#39;b2307a39-e878-458b-bc90-03bc578531d6&#39;</span> --asFile --path /Users/user/documents/SavedAsTest1.docx
 </pre></div>
 
 <p>Return file properties for file with server-relative url <em>/sites/project-x/documents/Test1.docx</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span>
 </pre></div>
 
 <p>Return file as string for file with server-relative url <em>/sites/project-x/documents/Test1.docx</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asString
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asString
 </pre></div>
 
 <p>Return list item properties for file with server-relative url <em>/sites/project-x/documents/Test1.docx</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asListItem
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asListItem
 </pre></div>
 
 <p>Save file with server-relative url <em>/sites/project-x/documents/Test1.docx</em> located in site <em>https://contoso.sharepoint.com/sites/project-x</em> to local file <em>/Users/user/documentsSavedAsTest1.docx</em></p>
-<div class="codehilite"><pre><span></span>spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asFile --path /Users/user/documents/SavedAsTest1.docx
+<div class="codehilite"><pre><span></span>m365 spo file get --webUrl https://contoso.sharepoint.com/sites/project-x --url <span class="s1">&#39;/sites/project-x/documents/Test1.docx&#39;</span> --asFile --path /Users/user/documents/SavedAsTest1.docx
 </pre></div>
                 
                   

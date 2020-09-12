@@ -2139,10 +2139,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2184,13 +2220,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2220,13 +2256,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="aad-approleassignment-add">aad approleassignment add<a class="headerlink" href="#aad-approleassignment-add" title="Permanent link">&para;</a></h1>
 <p>Adds service principal permissions also known as scopes and app role assignments for specified Azure AD application registration</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>aad approleassignment add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 aad approleassignment add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8277,15 +8313,15 @@
 <p>This command can also be used to assign permissions to system or user-assigned managed identity.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Adds SharePoint <em>Sites.Read.All</em> application permissions to Azure AD application with app id <em>57907bf8-73fa-43a6-89a5-1f603e29e451</em></p>
-<div class="codehilite"><pre><span></span>aad approleassignment add --appId <span class="s2">&quot;57907bf8-73fa-43a6-89a5-1f603e29e451&quot;</span> --resource <span class="s2">&quot;SharePoint&quot;</span> --scope <span class="s2">&quot;Sites.Read.All&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad approleassignment add --appId <span class="s2">&quot;57907bf8-73fa-43a6-89a5-1f603e29e451&quot;</span> --resource <span class="s2">&quot;SharePoint&quot;</span> --scope <span class="s2">&quot;Sites.Read.All&quot;</span>
 </pre></div>
 
 <p>Adds multiple Microsoft Graph application permissions to an Azure AD application with name <em>MyAppName</em></p>
-<div class="codehilite"><pre><span></span>aad approleassignment add --displayName <span class="s2">&quot;MyAppName&quot;</span> --resource <span class="s2">&quot;Microsoft Graph&quot;</span> --scope <span class="s2">&quot;Mail.Read,Mail.Send&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad approleassignment add --displayName <span class="s2">&quot;MyAppName&quot;</span> --resource <span class="s2">&quot;Microsoft Graph&quot;</span> --scope <span class="s2">&quot;Mail.Read,Mail.Send&quot;</span>
 </pre></div>
 
 <p>Adds Microsoft Graph <em>Mail.Read</em> application permissions to a system managed identity app with objectId <em>57907bf8-73fa-43a6-89a5-1f603e29e451</em></p>
-<div class="codehilite"><pre><span></span>aad approleassignment add --objectId <span class="s2">&quot;57907bf8-73fa-43a6-89a5-1f603e29e451&quot;</span> --resource <span class="s2">&quot;Microsoft Graph&quot;</span> --scope <span class="s2">&quot;Mail.Read&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad approleassignment add --objectId <span class="s2">&quot;57907bf8-73fa-43a6-89a5-1f603e29e451&quot;</span> --resource <span class="s2">&quot;Microsoft Graph&quot;</span> --scope <span class="s2">&quot;Mail.Read&quot;</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

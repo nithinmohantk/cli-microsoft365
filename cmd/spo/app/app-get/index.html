@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="spo-app-get">spo app get<a class="headerlink" href="#spo-app-get" title="Permanent link">&para;</a></h1>
 <p>Gets information about the specific app from the specified app catalog</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo app get <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo app get <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8271,19 +8307,19 @@
 <p>When specifying site collection app catalog, you can specify the URL either with our without the <em>AppCatalog</em> part, for example <code>https://contoso.sharepoint.com/sites/team-a/AppCatalog</code> or <code>https://contoso.sharepoint.com/sites/team-a</code>. CLI will accept both formats.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Return details about the app with ID <em>b2307a39-e878-458b-bc90-03bc578531d6</em> available in the tenant app catalog.</p>
-<div class="codehilite"><pre><span></span>spo app get --id b2307a39-e878-458b-bc90-03bc578531d6
+<div class="codehilite"><pre><span></span>m365 spo app get --id b2307a39-e878-458b-bc90-03bc578531d6
 </pre></div>
 
 <p>Return details about the app with name <em>solution.sppkg</em> available in the tenant app catalog. Will try to detect the app catalog URL</p>
-<div class="codehilite"><pre><span></span>spo app get --name solution.sppkg
+<div class="codehilite"><pre><span></span>m365 spo app get --name solution.sppkg
 </pre></div>
 
 <p>Return details about the app with name <em>solution.sppkg</em> available in the tenant app catalog using the specified app catalog URL</p>
-<div class="codehilite"><pre><span></span>spo app get --name solution.sppkg --appCatalogUrl https://contoso.sharepoint.com/sites/apps
+<div class="codehilite"><pre><span></span>m365 spo app get --name solution.sppkg --appCatalogUrl https://contoso.sharepoint.com/sites/apps
 </pre></div>
 
 <p>Return details about the app with ID <em>b2307a39-e878-458b-bc90-03bc578531d6</em> available in the site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em>.</p>
-<div class="codehilite"><pre><span></span>spo app get --id b2307a39-e878-458b-bc90-03bc578531d6 --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
+<div class="codehilite"><pre><span></span>m365 spo app get --id b2307a39-e878-458b-bc90-03bc578531d6 --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

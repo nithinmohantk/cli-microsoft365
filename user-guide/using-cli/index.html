@@ -2149,10 +2149,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2194,13 +2230,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2230,13 +2266,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8263,25 +8299,25 @@
 <p>Some options are required and necessary for the particular command to execute, while other are optional. When listing available options for the particular command, CLI for Microsoft 365 follows the naming convention where required options are wrapped in angle brackets (<code>&lt; &gt;</code>) while optional options are wrapped in square brackets (<code>[ ]</code>). For example, in the <code>spo cdn origin add</code> command, the origin you want to add is required (<code>-r, --origin &lt;origin&gt;</code>), while the type of CDN for which this origin should be added is optional (<code>-t, --type [type]</code>) and its value defaults to <code>Public</code>.</p>
 <h2 id="values-with-quotes">Values with quotes<a class="headerlink" href="#values-with-quotes" title="Permanent link">&para;</a></h2>
 <p>In cases, when the option's value contains spaces, it should be wrapped in quotes. For example, to create a modern team site for the <em>CLI for Microsoft 365</em> team, you would execute in the shell:</p>
-<div class="codehilite"><pre><span></span>m365 spo site add --alias office365cli --title <span class="s2">&quot;CLI for Microsoft 365&quot;</span>
+<div class="codehilite"><pre><span></span>m365 m365 spo site add --alias office365cli --title <span class="s2">&quot;CLI for Microsoft 365&quot;</span>
 </pre></div>
 
 <p>When the value, that you want to provide contains quotes, it needs to be wrapped in quotes as well, for example to pass a JSON value in the CLI prompt, you would execute:</p>
-<div class="codehilite"><pre><span></span>spo sitescript add --title <span class="s2">&quot;Contoso&quot;</span> --description <span class="s2">&quot;Contoso theme script&quot;</span> --content <span class="s1">&#39;{&quot;abc&quot;: &quot;def&quot;}&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo sitescript add --title <span class="s2">&quot;Contoso&quot;</span> --description <span class="s2">&quot;Contoso theme script&quot;</span> --content <span class="s1">&#39;{&quot;abc&quot;: &quot;def&quot;}&#39;</span>
 </pre></div>
 
 <p>If you use the CLI for Microsoft 365 in Bash, the outer pair of quotes will be processed by Bash so the value needs to be wrapped in an additional pair of quotes, for example:</p>
-<div class="codehilite"><pre><span></span>m365 spo sitescript add --title <span class="s2">&quot;Contoso&quot;</span> --description <span class="s2">&quot;Contoso theme script&quot;</span> --content <span class="s1">&#39;`{&quot;abc&quot;: &quot;def&quot;}`&#39;</span>
+<div class="codehilite"><pre><span></span>m365 m365 spo sitescript add --title <span class="s2">&quot;Contoso&quot;</span> --description <span class="s2">&quot;Contoso theme script&quot;</span> --content <span class="s1">&#39;`{&quot;abc&quot;: &quot;def&quot;}`&#39;</span>
 </pre></div>
 
 <h2 id="verbose-and-debug-mode">Verbose and debug mode<a class="headerlink" href="#verbose-and-debug-mode" title="Permanent link">&para;</a></h2>
 <p>By default, commands output only the information returned by the corresponding Microsoft 365 API, whether the command result or error. You can choose for a more user-friendly output by using the <code>--verbose</code> option or setting the <code>OFFICE365CLI_VERBOSE</code> environment variable to <code>1</code>. For example: by default, when checking status of the Microsoft 365 Public CDN, you would see:</p>
-<div class="codehilite"><pre><span></span>$ m365 spo cdn get
+<div class="codehilite"><pre><span></span>m365 $ m365 spo cdn get
 <span class="nb">true</span>
 </pre></div>
 
 <p>After adding the <code>--verbose</code> option, the output would change to:</p>
-<div class="codehilite"><pre><span></span>$ m365 spo cdn get --verbose
+<div class="codehilite"><pre><span></span>m365 $ m365 spo cdn get --verbose
 Retrieving status of Public CDN...
 Public CDN at https://contoso-admin.sharepoint.com is enabled
 </pre></div>

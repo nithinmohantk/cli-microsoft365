@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8230,7 +8266,7 @@
                 <h1 id="spo-site-add">spo site add<a class="headerlink" href="#spo-site-add" title="Permanent link">&para;</a></h1>
 <p>Creates new SharePoint Online site</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo site add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo site add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8361,55 +8397,55 @@
 <p>When trying to create a team site using app-only permissions, you will get an <em>Insufficient privileges to complete the operation.</em> error. As a workaround, you can use the <a href="../../../aad/o365group/o365group-add/"><code>aad o365group add</code></a> command, followed by <a href="../site-set/"><code>spo site set</code></a> to further configure the Team site.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Create modern team site with private group</p>
-<div class="codehilite"><pre><span></span>spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span>
 </pre></div>
 
 <p>Create modern team site with description and classification</p>
-<div class="codehilite"><pre><span></span>spo site add --type TeamSite --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --description <span class="s2">&quot;Site of team 1&quot;</span> --classification LBI
+<div class="codehilite"><pre><span></span>m365 spo site add --type TeamSite --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --description <span class="s2">&quot;Site of team 1&quot;</span> --classification LBI
 </pre></div>
 
 <p>Create modern team site with public group</p>
-<div class="codehilite"><pre><span></span>spo site add --type TeamSite --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --isPublic
+<div class="codehilite"><pre><span></span>m365 spo site add --type TeamSite --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --isPublic
 </pre></div>
 
 <p>Create modern team site using the Dutch language</p>
-<div class="codehilite"><pre><span></span>spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --lcid <span class="m">1043</span>
+<div class="codehilite"><pre><span></span>m365 spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --lcid <span class="m">1043</span>
 </pre></div>
 
 <p>Create modern team site with the specified users as owners</p>
-<div class="codehilite"><pre><span></span>spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --owners <span class="s2">&quot;steve@contoso.com, bob@contoso.com&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo site add --alias team1 --title <span class="s2">&quot;Team 1&quot;</span> --owners <span class="s2">&quot;steve@contoso.com, bob@contoso.com&quot;</span>
 </pre></div>
 
 <p>Create communication site using the Topic design</p>
-<div class="codehilite"><pre><span></span>spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing
+<div class="codehilite"><pre><span></span>m365 spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing
 </pre></div>
 
 <p>Create communication site using app-only permissions</p>
-<div class="codehilite"><pre><span></span>spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --owners <span class="s2">&quot;john.smith@contoso.com&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --owners <span class="s2">&quot;john.smith@contoso.com&quot;</span>
 </pre></div>
 
 <p>Create communication site using the Showcase design</p>
-<div class="codehilite"><pre><span></span>spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --siteDesign Showcase
+<div class="codehilite"><pre><span></span>m365 spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --siteDesign Showcase
 </pre></div>
 
 <p>Create communication site using a custom site design</p>
-<div class="codehilite"><pre><span></span>spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --siteDesignId 99f410fe-dd79-4b9d-8531-f2270c9c621c
+<div class="codehilite"><pre><span></span>m365 spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --siteDesignId 99f410fe-dd79-4b9d-8531-f2270c9c621c
 </pre></div>
 
 <p>Create communication site using the Blank design with description and classification</p>
-<div class="codehilite"><pre><span></span>spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --description Site of the marketing department --classification MBI --siteDesign Blank
+<div class="codehilite"><pre><span></span>m365 spo site add --type CommunicationSite --url https://contoso.sharepoint.com/sites/marketing --title Marketing --description Site of the marketing department --classification MBI --siteDesign Blank
 </pre></div>
 
 <p>Create new classic site collection using the Team site template. Set time zone to <code>UTC+01:00</code>. Don't wait for the site provisioning to complete</p>
-<div class="codehilite"><pre><span></span>spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span>
+<div class="codehilite"><pre><span></span>m365 spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span>
 </pre></div>
 
 <p>Create new classic site collection using the Team site template. Set time zone to <code>UTC+01:00</code>. Wait for the site provisioning to complete</p>
-<div class="codehilite"><pre><span></span>spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span> --webTemplate STS#0 --wait
+<div class="codehilite"><pre><span></span>m365 spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span> --webTemplate STS#0 --wait
 </pre></div>
 
 <p>Create new classic site collection using the Team site template. Set time zone to <code>UTC+01:00</code>. If a site with the same URL is in the recycle bin, delete it. Wait for the site provisioning to complete</p>
-<div class="codehilite"><pre><span></span>spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span> --webTemplate STS#0 --removeDeletedSite --wait
+<div class="codehilite"><pre><span></span>m365 spo site add --type ClassicSite --url https://contoso.sharepoint.com/sites/team --title Team --owners admin@contoso.onmicrosoft.com --timeZone <span class="m">4</span> --webTemplate STS#0 --removeDeletedSite --wait
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

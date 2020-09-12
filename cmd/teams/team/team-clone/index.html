@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8202,7 +8238,7 @@
                 <h1 id="teams-team-clone">teams team clone<a class="headerlink" href="#teams-team-clone" title="Permanent link">&para;</a></h1>
 <p>Creates a clone of a Microsoft Teams team</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>teams team clone <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 teams team clone <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8265,11 +8301,11 @@
 <p>When tabs are cloned, they are put into an unconfigured state. The first time you open them, you'll go through the configuration screen. If the person opening the tab does not have permission to configure apps, they will see a message explaining that the tab hasn't been configured.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Creates a clone of a Microsoft Teams team with mandatory parameters</p>
-<div class="codehilite"><pre><span></span>teams team clone --teamId 15d7a78e-fd77-4599-97a5-dbb6372846c5 --displayName <span class="s2">&quot;Library Assist&quot;</span> --partsToClone <span class="s2">&quot;apps,tabs,settings,channels,members&quot;</span>
+<div class="codehilite"><pre><span></span>m365 teams team clone --teamId 15d7a78e-fd77-4599-97a5-dbb6372846c5 --displayName <span class="s2">&quot;Library Assist&quot;</span> --partsToClone <span class="s2">&quot;apps,tabs,settings,channels,members&quot;</span>
 </pre></div>
 
 <p>Creates a clone of a Microsoft Teams team with mandatory and optional parameters</p>
-<div class="codehilite"><pre><span></span>teams team clone --teamId 15d7a78e-fd77-4599-97a5-dbb6372846c5 --displayName <span class="s2">&quot;Library Assist&quot;</span> --partsToClone <span class="s2">&quot;apps,tabs,settings,channels,members&quot;</span> --description <span class="s2">&quot;Self help community for library&quot;</span> --classification <span class="s2">&quot;Library&quot;</span> --visibility <span class="s2">&quot;public&quot;</span>
+<div class="codehilite"><pre><span></span>m365 teams team clone --teamId 15d7a78e-fd77-4599-97a5-dbb6372846c5 --displayName <span class="s2">&quot;Library Assist&quot;</span> --partsToClone <span class="s2">&quot;apps,tabs,settings,channels,members&quot;</span> --description <span class="s2">&quot;Self help community for library&quot;</span> --classification <span class="s2">&quot;Library&quot;</span> --visibility <span class="s2">&quot;public&quot;</span>
 </pre></div>
                 
                   

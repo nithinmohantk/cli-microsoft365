@@ -2196,10 +2196,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2241,13 +2277,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2277,13 +2313,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8348,7 +8384,7 @@
 <h4 id="log-in-using-user-name-and-password">Log in using user name and password<a class="headerlink" href="#log-in-using-user-name-and-password" title="Permanent link">&para;</a></h4>
 <p>An alternative way to log in to Microsoft 365 in the CLI for Microsoft 365 is by using a user name and password. To use this way of authenticating, set the <code>authType</code> option to <code>password</code> and specify your credentials using the <code>userName</code> and <code>password</code> options.</p>
 <p>To log in to Microsoft 365 using your user name and password, execute:</p>
-<div class="codehilite"><pre><span></span>login --authType password --userName user@contoso.com --password pass@word1
+<div class="codehilite"><pre><span></span>m365 login --authType password --userName user@contoso.com --password pass@word1
 </pre></div>
 
 <p>Using credentials to log in to Microsoft 365 is convenient in automation scenarios where you cannot authenticate interactively. The downside of this way of authenticating is, that it doesn't allow you to use any of the advanced security features that Azure AD offers. If your account for example uses multi-factor authentication, logging in to Microsoft 365 using credentials will fail.</p>
@@ -8360,11 +8396,11 @@
 <h4 id="log-in-using-a-certificate">Log in using a certificate<a class="headerlink" href="#log-in-using-a-certificate" title="Permanent link">&para;</a></h4>
 <p>Another way to log in to Microsoft 365 in the CLI for Microsoft 365 is by using a certificate. To use this authentication method, set the <code>CLIMICROSOFT365_AADAPPID</code> environment variable to the ID of the Azure AD application that you want to use to authenticate the CLI for Microsoft 365 and the <code>CLIMICROSOFT365_TENANT</code> environment variable to the ID of your Azure AD directory. When calling the login command, set the <code>authType</code> option to <code>certificate</code>, specify the path to the certificate private key using the <code>certificateFile</code> option and specify the certificate thumbprint using the <code>thumbprint</code> option.</p>
 <p>To log in to Microsoft 365 using a Personal Information Exchange (.pfx) file, execute:</p>
-<div class="codehilite"><pre><span></span>login --authType certificate --certificateFile /Users/user/dev/localhost.pfx --thumbprint 47C4885736C624E90491F32B98855AA8A7562AF1 --password <span class="s1">&#39;pass@word1&#39;</span>
+<div class="codehilite"><pre><span></span>m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pfx --thumbprint 47C4885736C624E90491F32B98855AA8A7562AF1 --password <span class="s1">&#39;pass@word1&#39;</span>
 </pre></div>
 
 <p>To log in to Microsoft 365 using a Privacy Enhanced Mail (PEM) certificate, execute:</p>
-<div class="codehilite"><pre><span></span>login --authType certificate --certificateFile /Users/user/dev/localhost.pem --thumbprint 47C4885736C624E90491F32B98855AA8A7562AF1
+<div class="codehilite"><pre><span></span>m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pem --thumbprint 47C4885736C624E90491F32B98855AA8A7562AF1
 </pre></div>
 
 <p>Logging in to Microsoft 365 using a certificate is convenient for automation scenarios where you cannot authenticate interactively but also don't want to use credentials.</p>
@@ -8384,7 +8420,7 @@
 <p>PFX files exported from a Windows key store will not work as they are protected with either a password or Active Directory account. The private key must either be exported from the protected .pfx or newly created using 3rd party tools like OpenSSL (https://www.openssl.org/).</p>
 </div>
 <p>Create a new self signed certificate:</p>
-<div class="codehilite"><pre><span></span>openssl req -x509 -sha256 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout privateKey.key -out certificate.cer
+<div class="codehilite"><pre><span></span>m365 openssl req -x509 -sha256 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout privateKey.key -out certificate.cer
 </pre></div>
 
 <p>Create a new Personal Information Exchange (.pfx) file</p>
@@ -8393,7 +8429,7 @@
 
 <p>At this point the <code>protected.pfx</code> file can be used to log in the CLI for Microsoft 365 following the instructions above for logging in using a .pfx file.</p>
 <p>If login with the .pfx file does not work then extract the private key from a protected .pfx and unprotect it:</p>
-<div class="codehilite"><pre><span></span>openssl pkcs12 -in protected.pfx -out privateKeyWithPassphrase.pem -nodes
+<div class="codehilite"><pre><span></span>m365 openssl pkcs12 -in protected.pfx -out privateKeyWithPassphrase.pem -nodes
 </pre></div>
 
 <p>At this point the <code>privateKeyWithPassphrase.pem</code> file can be used to log in the CLI for Microsoft 365 following the instructions above for logging in using a PEM certificate.</p>
@@ -8416,7 +8452,7 @@
 <h2 id="re-consent-the-pnp-microsoft-365-management-shell-azure-ad-application">Re-consent the PnP Microsoft 365 Management Shell Azure AD application<a class="headerlink" href="#re-consent-the-pnp-microsoft-365-management-shell-azure-ad-application" title="Permanent link">&para;</a></h2>
 <p>CLI for Microsoft 365 uses the <em>PnP Microsoft 365 Management Shell</em> Azure AD application to log in to your Microsoft 365 tenant on your behalf. As we add new commands to the CLI, it's possible, that new permissions will be added to the <em>PnP Microsoft 365 Management Shell</em> Azure AD application. To be able to use the newly added commands which depend on these new permissions, you will have to re-approve the <em>PnP Microsoft 365 Management Shell</em> Azure AD application in your Azure AD. This process is also known as <em>re-consenting the Azure AD application</em>.</p>
 <p>To re-consent the <em>PnP Microsoft 365 Management Shell</em> application in your Azure AD, in the command line execute:</p>
-<div class="codehilite"><pre><span></span>o365 cli reconsent
+<div class="codehilite"><pre><span></span>m365 o365 cli reconsent
 </pre></div>
 
 <p>CLI for Microsoft 365 will provide you with a URL that you should open in the web browser and sign in with your organizational account. After authenticating, Azure AD will prompt you to approve the new set of permissions. Once you approved the permissions, you will be redirected to an empty page. You can now use all commands in the CLI for Microsoft 365.</p>

@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="spo-app-deploy">spo app deploy<a class="headerlink" href="#spo-app-deploy" title="Permanent link">&para;</a></h1>
 <p>Deploys the specified app in the specified app catalog</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo app deploy <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo app deploy <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8276,23 +8312,23 @@
 <p>If the app with the specified ID doesn't exist in the app catalog, the command will fail with an error. Before you can deploy an app, you have to add it to the app catalog first using the <a href="../app-add/">spo app add</a> command.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Deploy the specified app in the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically.</p>
-<div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3
+<div class="codehilite"><pre><span></span>m365 spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3
 </pre></div>
 
 <p>Deploy the specified app in the site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em></p>
-<div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
+<div class="codehilite"><pre><span></span>m365 spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 <p>Deploy the app with the specified name in the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically.</p>
-<div class="codehilite"><pre><span></span>spo app deploy --name solution.sppkg
+<div class="codehilite"><pre><span></span>m365 spo app deploy --name solution.sppkg
 </pre></div>
 
 <p>Deploy the specified app in the tenant app catalog located at <em>https://contoso.sharepoint.com/sites/apps</em></p>
-<div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --appCatalogUrl https://contoso.sharepoint.com/sites/apps
+<div class="codehilite"><pre><span></span>m365 spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --appCatalogUrl https://contoso.sharepoint.com/sites/apps
 </pre></div>
 
 <p>Deploy the specified app to the whole tenant at once. Features included in the solution will not be activated.</p>
-<div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --skipFeatureDeployment
+<div class="codehilite"><pre><span></span>m365 spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --skipFeatureDeployment
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

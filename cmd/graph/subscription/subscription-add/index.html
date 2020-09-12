@@ -2132,10 +2132,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2177,13 +2213,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2213,13 +2249,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8202,7 +8238,7 @@
                 <h1 id="graph-subscription-add">graph subscription add<a class="headerlink" href="#graph-subscription-add" title="Permanent link">&para;</a></h1>
 <p>Creates a Microsoft Graph subscription</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>graph subscription add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 graph subscription add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8268,15 +8304,15 @@ That means, for example, you cannot use the delegated permission Calendars.Read 
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Create a subscription</p>
-<div class="codehilite"><pre><span></span>graph subscription add --resource <span class="s2">&quot;me/mailFolders(&#39;Inbox&#39;)/messages&quot;</span> --changeType <span class="s2">&quot;updated&quot;</span> --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span> --expirationDateTime <span class="s2">&quot;2016-11-20T18:23:45.935Z&quot;</span> --clientState <span class="s2">&quot;secretClientState&quot;</span>
+<div class="codehilite"><pre><span></span>m365 graph subscription add --resource <span class="s2">&quot;me/mailFolders(&#39;Inbox&#39;)/messages&quot;</span> --changeType <span class="s2">&quot;updated&quot;</span> --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span> --expirationDateTime <span class="s2">&quot;2016-11-20T18:23:45.935Z&quot;</span> --clientState <span class="s2">&quot;secretClientState&quot;</span>
 </pre></div>
 
 <p>Create a subscription on multiple change types</p>
-<div class="codehilite"><pre><span></span>graph subscription add --resource groups --changeType updated,deleted --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span> --expirationDateTime <span class="s2">&quot;2016-11-20T18:23:45.935Z&quot;</span> --clientState <span class="s2">&quot;secretClientState&quot;</span>
+<div class="codehilite"><pre><span></span>m365 graph subscription add --resource groups --changeType updated,deleted --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span> --expirationDateTime <span class="s2">&quot;2016-11-20T18:23:45.935Z&quot;</span> --clientState <span class="s2">&quot;secretClientState&quot;</span>
 </pre></div>
 
 <p>Create a subscription using the maximum allowed expiration for Group resources</p>
-<div class="codehilite"><pre><span></span>graph subscription add --resource groups --changeType <span class="s2">&quot;updated&quot;</span> --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span>
+<div class="codehilite"><pre><span></span>m365 graph subscription add --resource groups --changeType <span class="s2">&quot;updated&quot;</span> --notificationUrl <span class="s2">&quot;https://webhook.azurewebsites.net/api/send/myNotifyClient&quot;</span>
 </pre></div>
                 
                   

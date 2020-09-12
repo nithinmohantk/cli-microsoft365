@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="spo-web-set">spo web set<a class="headerlink" href="#spo-web-set" title="Permanent link">&para;</a></h1>
 <p>Updates subsite properties</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8298,35 +8334,35 @@
 <p>Next to updating web properties corresponding to the options of this command, you can update the value of any other web property using its CSOM name, eg. <code>--AllowAutomaticASPXPageIndexing</code>. At this moment, the CLI supports properties of types <code>Boolean</code>, <code>String</code> and <code>Int32</code>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Update subsite title</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --title Team-a
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --title Team-a
 </pre></div>
 
 <p>Hide quick launch on the subsite</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --quickLaunchEnabled <span class="nb">false</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --quickLaunchEnabled <span class="nb">false</span>
 </pre></div>
 
 <p>Set site header layout to compact</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --headerLayout compact
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --headerLayout compact
 </pre></div>
 
 <p>Set site header color to primary theme background color</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --headerEmphasis <span class="m">0</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --headerEmphasis <span class="m">0</span>
 </pre></div>
 
 <p>Enable megamenu in the site</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --megaMenuEnabled <span class="nb">true</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --megaMenuEnabled <span class="nb">true</span>
 </pre></div>
 
 <p>Hide footer in the site</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --footerEnabled <span class="nb">false</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --footerEnabled <span class="nb">false</span>
 </pre></div>
 
 <p>Set search scope to tenant scope</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --searchScope tenant
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span> --webUrl https://contoso.sharepoint.com/sites/team-a --searchScope tenant
 </pre></div>
 
 <p>Set welcome page for the web</p>
-<div class="codehilite"><pre><span></span>spo web <span class="nb">set</span>  --webUrl https://contoso.sharepoint.com/sites/team-a --welcomePage <span class="s2">&quot;SitePages/new-home.aspx&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo web <span class="nb">set</span>  --webUrl https://contoso.sharepoint.com/sites/team-a --welcomePage <span class="s2">&quot;SitePages/new-home.aspx&quot;</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8234,11 +8270,11 @@
 <p>This command is based on a SharePoint API that is currently in preview and is subject to change once the API reached general availability.</p>
 </div>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo site groupify <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo site groupify <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="alias">Alias<a class="headerlink" href="#alias" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo site groupify
+<div class="codehilite"><pre><span></span>m365 spo site groupify
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8304,19 +8340,19 @@
 <p>When connecting site collection to an Microsoft 365 Group, SharePoint will create a new group using the specified information. If a group with the same name already exists, you will get a <code>The group alias already exists.</code> error.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Connect site collection to an Microsoft 365 Group</p>
-<div class="codehilite"><pre><span></span>spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span>
 </pre></div>
 
 <p>Connect site collection to an Microsoft 365 Group and make the group public</p>
-<div class="codehilite"><pre><span></span>spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --isPublic
+<div class="codehilite"><pre><span></span>m365 spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --isPublic
 </pre></div>
 
 <p>Connect site collection to an Microsoft 365 Group and set the group classification</p>
-<div class="codehilite"><pre><span></span>spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --classification HBI
+<div class="codehilite"><pre><span></span>m365 spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --classification HBI
 </pre></div>
 
 <p>Connect site collection to an Microsoft 365 Group and keep the old home page</p>
-<div class="codehilite"><pre><span></span>spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --keepOldHomepage
+<div class="codehilite"><pre><span></span>m365 spo site groupify --siteUrl https://contoso.sharepoin.com/sites/team-a --alias team-a --displayName <span class="s1">&#39;Team A&#39;</span> --keepOldHomepage
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

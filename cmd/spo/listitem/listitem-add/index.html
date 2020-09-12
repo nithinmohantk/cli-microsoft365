@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8188,7 +8224,7 @@
                 <h1 id="spo-listitem-add">spo listitem add<a class="headerlink" href="#spo-listitem-add" title="Permanent link">&para;</a></h1>
 <p>Creates a list item in the specified list</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo listitem add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8244,27 +8280,27 @@
 </table>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Add an item with Title <em>Demo Item</em> and content type name <em>Item</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --contentType Item --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Item&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --contentType Item --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Item&quot;</span>
 </pre></div>
 
 <p>Add an item with Title <em>Demo Multi Managed Metadata Field</em> and a single-select metadata field named <em>SingleMetadataField</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Single Managed Metadata Field&quot;</span> --SingleMetadataField <span class="s2">&quot;TermLabel1|fa2f6bfd-1fad-4d18-9c89-289fe6941377;&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Single Managed Metadata Field&quot;</span> --SingleMetadataField <span class="s2">&quot;TermLabel1|fa2f6bfd-1fad-4d18-9c89-289fe6941377;&quot;</span>
 </pre></div>
 
 <p>Add an item with Title <em>Demo Multi Managed Metadata Field</em> and a multi-select metadata field named <em>MultiMetadataField</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Multi Managed Metadata Field&quot;</span> --MultiMetadataField <span class="s2">&quot;TermLabel1|cf8c72a1-0207-40ee-aebd-fca67d20bc8a;TermLabel2|e5cc320f-8b65-4882-afd5-f24d88d52b75;&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Multi Managed Metadata Field&quot;</span> --MultiMetadataField <span class="s2">&quot;TermLabel1|cf8c72a1-0207-40ee-aebd-fca67d20bc8a;TermLabel2|e5cc320f-8b65-4882-afd5-f24d88d52b75;&quot;</span>
 </pre></div>
 
 <p>Add an item with Title <em>Demo Single Person Field</em> and a single-select people field named <em>SinglePeopleField</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Single Person Field&quot;</span> --SinglePeopleField <span class="s2">&quot;[{&#39;Key&#39;:&#39;i:0#.f|membership|markh@conotoso.com&#39;}]&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Single Person Field&quot;</span> --SinglePeopleField <span class="s2">&quot;[{&#39;Key&#39;:&#39;i:0#.f|membership|markh@conotoso.com&#39;}]&quot;</span>
 </pre></div>
 
 <p>Add an item with Title <em>Demo Multi Person Field</em> and a multi-select people field named <em>MultiPeopleField</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Multi Person Field&quot;</span> --MultiPeopleField <span class="s2">&quot;[{&#39;Key&#39;:&#39;i:0#.f|membership|markh@conotoso.com&#39;},{&#39;Key&#39;:&#39;i:0#.f|membership|adamb@conotoso.com&#39;}]&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Multi Person Field&quot;</span> --MultiPeopleField <span class="s2">&quot;[{&#39;Key&#39;:&#39;i:0#.f|membership|markh@conotoso.com&#39;},{&#39;Key&#39;:&#39;i:0#.f|membership|adamb@conotoso.com&#39;}]&quot;</span>
 </pre></div>
 
 <p>Add an item with Title <em>Demo Hyperlink Field</em> and a hyperlink field named <em>CustomHyperlink</em> to list with title <em>Demo List</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Hyperlink Field&quot;</span> --CustomHyperlink <span class="s2">&quot;https://www.bing.com, Bing&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo listitem add --listTitle <span class="s2">&quot;Demo List&quot;</span> --webUrl https://contoso.sharepoint.com/sites/project-x --Title <span class="s2">&quot;Demo Hyperlink Field&quot;</span> --CustomHyperlink <span class="s2">&quot;https://www.bing.com, Bing&quot;</span>
 </pre></div>
                 
                   

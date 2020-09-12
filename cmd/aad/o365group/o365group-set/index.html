@@ -2132,10 +2132,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2177,13 +2213,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2213,13 +2249,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8202,7 +8238,7 @@
                 <h1 id="aad-o365group-set">aad o365group set<a class="headerlink" href="#aad-o365group-set" title="Permanent link">&para;</a></h1>
 <p>Updates Microsoft 365 Group properties</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8269,23 +8305,23 @@
 <p>When specifying the path to the logo image you can use both relative and absolute paths. Note, that ~ in the path, will not be resolved and will most likely result in an error.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Update Microsoft 365 Group display name</p>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --displayName Finance
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --displayName Finance
 </pre></div>
 
 <p>Change Microsoft 365 Group visibility to public</p>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --isPrivate <span class="nb">false</span>
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --isPrivate <span class="nb">false</span>
 </pre></div>
 
 <p>Add new Microsoft 365 Group owners</p>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --owners <span class="s2">&quot;DebraB@contoso.onmicrosoft.com,DiegoS@contoso.onmicrosoft.com&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --owners <span class="s2">&quot;DebraB@contoso.onmicrosoft.com,DiegoS@contoso.onmicrosoft.com&quot;</span>
 </pre></div>
 
 <p>Add new Microsoft 365 Group members</p>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --members <span class="s2">&quot;DebraB@contoso.onmicrosoft.com,DiegoS@contoso.onmicrosoft.com&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --members <span class="s2">&quot;DebraB@contoso.onmicrosoft.com,DiegoS@contoso.onmicrosoft.com&quot;</span>
 </pre></div>
 
 <p>Update Microsoft 365 Group logo</p>
-<div class="codehilite"><pre><span></span>aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --logoPath images/logo.png
+<div class="codehilite"><pre><span></span>m365 aad o365group <span class="nb">set</span> --id 28beab62-7540-4db1-a23f-29a6018a3848 --logoPath images/logo.png
 </pre></div>
                 
                   

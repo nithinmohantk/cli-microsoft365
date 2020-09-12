@@ -2139,10 +2139,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2184,13 +2220,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2220,13 +2256,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="aad-siteclassification-enable">aad siteclassification enable<a class="headerlink" href="#aad-siteclassification-enable" title="Permanent link">&para;</a></h1>
 <p>Enables site classification configuration</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>aad siteclassification <span class="nb">enable</span> <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 aad siteclassification <span class="nb">enable</span> <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8273,15 +8309,15 @@
 </div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Enable site classification</p>
-<div class="codehilite"><pre><span></span>aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span>
 </pre></div>
 
 <p>Enable site classification with a usage guidelines URL</p>
-<div class="codehilite"><pre><span></span>aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span> --usageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span> --usageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span>
 </pre></div>
 
 <p>Enable site classification with usage guidelines URLs for guests and members</p>
-<div class="codehilite"><pre><span></span>aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span> --usageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span> --guestUsageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad siteclassification <span class="nb">enable</span> --classifications <span class="s2">&quot;High, Medium, Low&quot;</span> --defaultClassification <span class="s2">&quot;Medium&quot;</span> --usageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span> --guestUsageGuidelinesUrl <span class="s2">&quot;http://aka.ms/pnp&quot;</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

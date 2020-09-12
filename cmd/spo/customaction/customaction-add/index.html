@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="spo-customaction-add">spo customaction add<a class="headerlink" href="#spo-customaction-add" title="Permanent link">&para;</a></h1>
 <p>Adds a user custom action for site or site collection</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo customaction add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8324,42 +8360,42 @@
 </table>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
 <p>Running this command from the Windows Command Shell (cmd.exe) or PowerShell for Windows OS XP, 7, 8, 8.1 without bash installed might require additional formatting for command options that have JSON, XML or JavaScript values because the command shell treat quotes differently. For example, this is how ApplicationCustomizer user custom action can be created from the Windows cmd.exe:</p>
-<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourAppCustomizer&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ApplicationCustomizer&quot;</span> -c b41916e7-e69d-467f-b37f-ff8ecf8f99f2 -p <span class="s1">&#39;{\&quot;testMessage\&quot;:\&quot;Test message\&quot;}&#39;</span>
+<div class="codehilite"><pre><span></span>m365 m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourAppCustomizer&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ApplicationCustomizer&quot;</span> -c b41916e7-e69d-467f-b37f-ff8ecf8f99f2 -p <span class="s1">&#39;{\&quot;testMessage\&quot;:\&quot;Test message\&quot;}&#39;</span>
 </pre></div>
 
 <p>Note, how the clientSideComponentProperties option (-p) has escaped double quotes <code>'{\"testMessage\":\"Test message\"}'</code> compared to execution from bash <code>'{"testMessage":"Test message"}'</code>.</p>
 <p>The <code>--rights</code> option accepts <strong>case sensitive</strong> values.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Adds tenant-wide SharePoint Framework Application Customizer extension in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourAppCustomizer&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ApplicationCustomizer&quot;</span> -c b41916e7-e69d-467f-b37f-ff8ecf8f99f2 -p <span class="s1">&#39;{&quot;testMessage&quot;:&quot;Test message&quot;}&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourAppCustomizer&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ApplicationCustomizer&quot;</span> -c b41916e7-e69d-467f-b37f-ff8ecf8f99f2 -p <span class="s1">&#39;{&quot;testMessage&quot;:&quot;Test message&quot;}&#39;</span>
 </pre></div>
 
 <p>Adds tenant-wide SharePoint Framework <strong>modern List View</strong> Command Set extension in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourCommandSet&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ListViewCommandSet&quot;</span> -c db3e6e35-363c-42b9-a254-ca661e437848 -p <span class="s1">&#39;{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}&#39;</span> --registrationId <span class="m">100</span> --registrationType List
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourCommandSet&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ClientSideExtension.ListViewCommandSet&quot;</span> -c db3e6e35-363c-42b9-a254-ca661e437848 -p <span class="s1">&#39;{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}&#39;</span> --registrationId <span class="m">100</span> --registrationType List
 </pre></div>
 
 <p>Creates url custom action in the SiteActions menu in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;Microsoft.SharePoint.StandardMenu&quot;</span> -g <span class="s2">&quot;SiteActions&quot;</span> --actionUrl <span class="s2">&quot;~site/SitePages/Home.aspx&quot;</span> --sequence <span class="m">100</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;Microsoft.SharePoint.StandardMenu&quot;</span> -g <span class="s2">&quot;SiteActions&quot;</span> --actionUrl <span class="s2">&quot;~site/SitePages/Home.aspx&quot;</span> --sequence <span class="m">100</span>
 </pre></div>
 
 <p>Creates custom action in <strong>classic</strong> Document Library edit context menu in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;EditControlBlock&quot;</span> --actionUrl <span class="s2">&quot;javascript:(function(){ return console.log(&#39;CLI for Microsoft 365 rocks!&#39;); })();&quot;</span> --registrationId <span class="m">101</span> --registrationType List
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;EditControlBlock&quot;</span> --actionUrl <span class="s2">&quot;javascript:(function(){ return console.log(&#39;CLI for Microsoft 365 rocks!&#39;); })();&quot;</span> --registrationId <span class="m">101</span> --registrationType List
 </pre></div>
 
 <p>Creates ScriptLink custom action with script source in <strong>classic pages</strong> in site collection <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ScriptLink&quot;</span> --scriptSrc <span class="s2">&quot;~sitecollection/SiteAssets/YourScript.js&quot;</span> --sequence <span class="m">101</span> -s Site
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ScriptLink&quot;</span> --scriptSrc <span class="s2">&quot;~sitecollection/SiteAssets/YourScript.js&quot;</span> --sequence <span class="m">101</span> -s Site
 </pre></div>
 
 <p>Creates ScriptLink custom action with script block in <strong>classic pages</strong> in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ScriptLink&quot;</span> --scriptBlock <span class="s2">&quot;(function(){ return console.log(&#39;Hello CLI for Microsoft 365!&#39;); })();&quot;</span> --sequence <span class="m">102</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;ScriptLink&quot;</span> --scriptBlock <span class="s2">&quot;(function(){ return console.log(&#39;Hello CLI for Microsoft 365!&#39;); })();&quot;</span> --sequence <span class="m">102</span>
 </pre></div>
 
 <p>Creates <strong>classic List View</strong> custom action located in the Ribbon in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;CommandUI.Ribbon&quot;</span> --commandUIExtension <span class="s1">&#39;&lt;CommandUIExtension&gt;&lt;CommandUIDefinitions&gt;&lt;CommandUIDefinition Location=&quot;Ribbon.List.Share.Controls._children&quot;&gt;&lt;Button Id=&quot;Ribbon.List.Share.GetItemsCountButton&quot; Alt=&quot;Get list items count&quot; Sequence=&quot;11&quot; Command=&quot;Invoke_GetItemsCountButtonRequest&quot; LabelText=&quot;Get Items Count&quot; TemplateAlias=&quot;o1&quot; Image32by32=&quot;_layouts/15/images/placeholder32x32.png&quot; Image16by16=&quot;_layouts/15/images/placeholder16x16.png&quot; /&gt;&lt;/CommandUIDefinition&gt;&lt;/CommandUIDefinitions&gt;&lt;CommandUIHandlers&gt;&lt;CommandUIHandler Command=&quot;Invoke_GetItemsCountButtonRequest&quot; CommandAction=&quot;javascript: alert(ctx.TotalListItems);&quot; EnabledScript=&quot;javascript: function checkEnable() { return (true);} checkEnable();&quot;/&gt;&lt;/CommandUIHandlers&gt;&lt;/CommandUIExtension&gt;&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;CommandUI.Ribbon&quot;</span> --commandUIExtension <span class="s1">&#39;&lt;CommandUIExtension&gt;&lt;CommandUIDefinitions&gt;&lt;CommandUIDefinition Location=&quot;Ribbon.List.Share.Controls._children&quot;&gt;&lt;Button Id=&quot;Ribbon.List.Share.GetItemsCountButton&quot; Alt=&quot;Get list items count&quot; Sequence=&quot;11&quot; Command=&quot;Invoke_GetItemsCountButtonRequest&quot; LabelText=&quot;Get Items Count&quot; TemplateAlias=&quot;o1&quot; Image32by32=&quot;_layouts/15/images/placeholder32x32.png&quot; Image16by16=&quot;_layouts/15/images/placeholder16x16.png&quot; /&gt;&lt;/CommandUIDefinition&gt;&lt;/CommandUIDefinitions&gt;&lt;CommandUIHandlers&gt;&lt;CommandUIHandler Command=&quot;Invoke_GetItemsCountButtonRequest&quot; CommandAction=&quot;javascript: alert(ctx.TotalListItems);&quot; EnabledScript=&quot;javascript: function checkEnable() { return (true);} checkEnable();&quot;/&gt;&lt;/CommandUIHandlers&gt;&lt;/CommandUIExtension&gt;&#39;</span>
 </pre></div>
 
 <p>Creates custom action with delegated rights in the SiteActions menu in site <em>https://contoso.sharepoint.com/sites/test</em></p>
-<div class="codehilite"><pre><span></span>spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;Microsoft.SharePoint.StandardMenu&quot;</span> -g <span class="s2">&quot;SiteActions&quot;</span> --actionUrl <span class="s2">&quot;~site/SitePages/Home.aspx&quot;</span> --rights <span class="s2">&quot;AddListItems,DeleteListItems,ManageLists&quot;</span>
+<div class="codehilite"><pre><span></span>m365 spo customaction add -u https://contoso.sharepoint.com/sites/test -t <span class="s2">&quot;YourTitle&quot;</span> -n <span class="s2">&quot;YourName&quot;</span> -l <span class="s2">&quot;Microsoft.SharePoint.StandardMenu&quot;</span> -g <span class="s2">&quot;SiteActions&quot;</span> --actionUrl <span class="s2">&quot;~site/SitePages/Home.aspx&quot;</span> --rights <span class="s2">&quot;AddListItems,DeleteListItems,ManageLists&quot;</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

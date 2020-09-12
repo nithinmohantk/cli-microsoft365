@@ -2142,10 +2142,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2187,13 +2223,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2223,13 +2259,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8231,13 +8267,13 @@
 <h2 id="install-the-cli-for-microsoft-365">Install the CLI for Microsoft 365<a class="headerlink" href="#install-the-cli-for-microsoft-365" title="Permanent link">&para;</a></h2>
 <p>CLI for Microsoft 365 is distributed as a Node.js package and published on <a href="https://www.npmjs.com">npmjs.com</a>. You can install it using your Node package manager, such as npm or Yarn.</p>
 <p>To install the CLI for Microsoft 365, in the command line execute:</p>
-<div class="codehilite"><pre><span></span>npm install -g @pnp/cli-microsoft365
+<div class="codehilite"><pre><span></span>m365 npm install -g @pnp/cli-microsoft365
 </pre></div>
 
 <script src="https://asciinema.org/a/158191.js" id="asciicast-158191" async></script>
 
 <p>If you're using Yarn, you can install the CLI for Microsoft 365 by executing:</p>
-<div class="codehilite"><pre><span></span>yarn global add @pnp/cli-microsoft365
+<div class="codehilite"><pre><span></span>m365 yarn global add @pnp/cli-microsoft365
 </pre></div>
 
 <div class="admonition tip">
@@ -8246,17 +8282,17 @@
 </div>
 <h2 id="check-the-installed-version">Check the installed version<a class="headerlink" href="#check-the-installed-version" title="Permanent link">&para;</a></h2>
 <p>To check which version of the CLI for Microsoft 365 you have installed on your computer, execute in the command line:</p>
-<div class="codehilite"><pre><span></span>m365 version
+<div class="codehilite"><pre><span></span>m365 m365 version
 </pre></div>
 
 <p>Alternatively, you can check the version of the Node.js package you have installed, by executing:</p>
-<div class="codehilite"><pre><span></span>npm ls -g --depth<span class="o">=</span><span class="m">0</span>
+<div class="codehilite"><pre><span></span>m365 npm ls -g --depth<span class="o">=</span><span class="m">0</span>
 </pre></div>
 
 <p>The version of the CLI is the same as the version of the Node.js package distributing the CLI, so by using either of the commands you can control which version of the CLI you have installed.</p>
 <h2 id="check-if-a-new-version-is-available">Check if a new version is available<a class="headerlink" href="#check-if-a-new-version-is-available" title="Permanent link">&para;</a></h2>
 <p>We are continuously evolving the CLI for Microsoft 365 and adding more features to it. You can download new versions of the CLI from npmjs.com. To check, if a new version of the CLI for Microsoft 365 is available, execute in the command line:</p>
-<div class="codehilite"><pre><span></span>npm outdated -g
+<div class="codehilite"><pre><span></span>m365 npm outdated -g
 </pre></div>
 
 <p>For each package that you have installed globally, npm will show the version you have currently installed as well as the latest version available on npm.</p>
@@ -8276,7 +8312,7 @@
 
 <h2 id="update-the-cli">Update the CLI<a class="headerlink" href="#update-the-cli" title="Permanent link">&para;</a></h2>
 <p>To update the CLI, execute in the command line:</p>
-<div class="codehilite"><pre><span></span>npm install -g @pnp/cli-microsoft365@latest
+<div class="codehilite"><pre><span></span>m365 npm install -g @pnp/cli-microsoft365@latest
 </pre></div>
 
 <p>This will download and install the latest public version of the CLI for Microsoft 365. If you want to update to the latest beta version of the CLI, replace <code>@latest</code> with <code>@next</code>.</p>
@@ -8290,7 +8326,7 @@
 <p>Before uninstalling the CLI, log out from Microsoft 365 using the <code>logout</code> command. CLI for Microsoft 365 persists connection information on your computer and if you don't log out before uninstalling the CLI, this information will be left on your computer and you will have to remove it manually. For more information see the article on <a href="../../concepts/persisting-connection/">persisting connection information</a></p>
 </div>
 <p>To uninstall the CLI for Microsoft 365, execute in the command line:</p>
-<div class="codehilite"><pre><span></span>npm uninstall -g @pnp/cli-microsoft365
+<div class="codehilite"><pre><span></span>m365 npm uninstall -g @pnp/cli-microsoft365
 </pre></div>
 
 <p>This command will remove all CLI for Microsoft 365 files from your computer.</p>

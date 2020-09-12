@@ -2069,10 +2069,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2114,13 +2150,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2150,13 +2186,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8202,7 +8238,7 @@
                 <h1 id="spo-list-add">spo list add<a class="headerlink" href="#spo-list-add" title="Permanent link">&para;</a></h1>
 <p>Creates list in the specified site</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>spo list add <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 spo list add <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8490,15 +8526,15 @@
 </table>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Add a list with title <em>Announcements</em> and baseTemplate <em>Announcements</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em></p>
-<div class="codehilite"><pre><span></span>spo list add --title Announcements --baseTemplate Announcements --webUrl https://contoso.sharepoint.com/sites/project-x
+<div class="codehilite"><pre><span></span>m365 spo list add --title Announcements --baseTemplate Announcements --webUrl https://contoso.sharepoint.com/sites/project-x
 </pre></div>
 
 <p>Add a list with title <em>Announcements</em>, baseTemplate <em>Announcements</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em> using a custom XML schema</p>
-<div class="codehilite"><pre><span></span>spo list add --title Announcements --baseTemplate Announcements --webUrl https://contoso.sharepoint.com/sites/project-x --schemaXml <span class="s1">&#39;&lt;List xmlns:ows=&quot;Microsoft SharePoint&quot; Title=&quot;List1&quot; FolderCreation=&quot;FALSE&quot; Direction=&quot;$Resources:Direction;&quot; Url=&quot;Lists/List1&quot; BaseType=&quot;0&quot; xmlns=&quot;http://schemas.microsoft.com/sharepoint/&quot;&gt;&lt;MetaData&gt;&lt;ContentTypes&gt;&lt;ContentTypeRef ID=&quot;0x01&quot;&gt;&lt;Folder TargetName=&quot;Item&quot; /&gt;&lt;/ContentTypeRef&gt;&lt;ContentTypeRef ID=&quot;0x0120&quot; /&gt;&lt;/ContentTypes&gt;&lt;Fields&gt;&lt;Field ID=&quot;{fa564e0f-0c70-4ab9-b863-0177e6ddd247}&quot; Type=&quot;Text&quot; Name=&quot;Title&quot; DisplayName=&quot;$Resources:core,Title;&quot; Required=&quot;TRUE&quot; SourceID=&quot;http://schemas.microsoft.com/sharepoint/v3&quot; StaticName=&quot;Title&quot; MaxLength=&quot;255&quot; /&gt;&lt;/Fields&gt;&lt;Views&gt;&lt;View BaseViewID=&quot;0&quot; Type=&quot;HTML&quot; MobileView=&quot;TRUE&quot; TabularView=&quot;FALSE&quot;&gt;&lt;Toolbar Type=&quot;Standard&quot; /&gt;&lt;XslLink Default=&quot;TRUE&quot;&gt;main.xsl&lt;/XslLink&gt;&lt;RowLimit Paged=&quot;TRUE&quot;&gt;30&lt;/RowLimit&gt;&lt;ViewFields&gt;&lt;FieldRef Name=&quot;LinkTitleNoMenu&quot;&gt;&lt;/FieldRef&gt;&lt;/ViewFields&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;Modified&quot; Ascending=&quot;FALSE&quot;&gt;&lt;/FieldRef&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ParameterBindings&gt;&lt;ParameterBinding Name=&quot;AddNewAnnouncement&quot; Location=&quot;Resource(wss,addnewitem)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncements&quot; Location=&quot;Resource(wss,noXinviewofY_LIST)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncementsHowTo&quot; Location=&quot;Resource(wss,noXinviewofY_ONET_HOME)&quot; /&gt;&lt;/ParameterBindings&gt;&lt;/View&gt;&lt;View BaseViewID=&quot;1&quot; Type=&quot;HTML&quot; WebPartZoneID=&quot;Main&quot; DisplayName=&quot;$Resources:core,objectiv_schema_mwsidcamlidC24;&quot; DefaultView=&quot;TRUE&quot; MobileView=&quot;TRUE&quot; MobileDefaultView=&quot;TRUE&quot; SetupPath=&quot;pages\viewpage.aspx&quot; ImageUrl=&quot;/_layouts/15/images/generic.png?rev=23&quot; Url=&quot;AllItems.aspx&quot;&gt;&lt;Toolbar Type=&quot;Standard&quot; /&gt;&lt;XslLink Default=&quot;TRUE&quot;&gt;main.xsl&lt;/XslLink&gt;&lt;JSLink&gt;clienttemplates.js&lt;/JSLink&gt;&lt;RowLimit Paged=&quot;TRUE&quot;&gt;30&lt;/RowLimit&gt;&lt;ViewFields&gt;&lt;FieldRef Name=&quot;LinkTitle&quot;&gt;&lt;/FieldRef&gt;&lt;/ViewFields&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;ID&quot;&gt;&lt;/FieldRef&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ParameterBindings&gt;&lt;ParameterBinding Name=&quot;NoAnnouncements&quot; Location=&quot;Resource(wss,noXinviewofY_LIST)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncementsHowTo&quot; Location=&quot;Resource(wss,noXinviewofY_DEFAULT)&quot; /&gt;&lt;/ParameterBindings&gt;&lt;/View&gt;&lt;/Views&gt;&lt;Forms&gt;&lt;Form Type=&quot;DisplayForm&quot; Url=&quot;DispForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;Form Type=&quot;EditForm&quot; Url=&quot;EditForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;Form Type=&quot;NewForm&quot; Url=&quot;NewForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;/Forms&gt;&lt;/MetaData&gt;&lt;/List&gt;&#39;</span>
+<div class="codehilite"><pre><span></span>m365 spo list add --title Announcements --baseTemplate Announcements --webUrl https://contoso.sharepoint.com/sites/project-x --schemaXml <span class="s1">&#39;&lt;List xmlns:ows=&quot;Microsoft SharePoint&quot; Title=&quot;List1&quot; FolderCreation=&quot;FALSE&quot; Direction=&quot;$Resources:Direction;&quot; Url=&quot;Lists/List1&quot; BaseType=&quot;0&quot; xmlns=&quot;http://schemas.microsoft.com/sharepoint/&quot;&gt;&lt;MetaData&gt;&lt;ContentTypes&gt;&lt;ContentTypeRef ID=&quot;0x01&quot;&gt;&lt;Folder TargetName=&quot;Item&quot; /&gt;&lt;/ContentTypeRef&gt;&lt;ContentTypeRef ID=&quot;0x0120&quot; /&gt;&lt;/ContentTypes&gt;&lt;Fields&gt;&lt;Field ID=&quot;{fa564e0f-0c70-4ab9-b863-0177e6ddd247}&quot; Type=&quot;Text&quot; Name=&quot;Title&quot; DisplayName=&quot;$Resources:core,Title;&quot; Required=&quot;TRUE&quot; SourceID=&quot;http://schemas.microsoft.com/sharepoint/v3&quot; StaticName=&quot;Title&quot; MaxLength=&quot;255&quot; /&gt;&lt;/Fields&gt;&lt;Views&gt;&lt;View BaseViewID=&quot;0&quot; Type=&quot;HTML&quot; MobileView=&quot;TRUE&quot; TabularView=&quot;FALSE&quot;&gt;&lt;Toolbar Type=&quot;Standard&quot; /&gt;&lt;XslLink Default=&quot;TRUE&quot;&gt;main.xsl&lt;/XslLink&gt;&lt;RowLimit Paged=&quot;TRUE&quot;&gt;30&lt;/RowLimit&gt;&lt;ViewFields&gt;&lt;FieldRef Name=&quot;LinkTitleNoMenu&quot;&gt;&lt;/FieldRef&gt;&lt;/ViewFields&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;Modified&quot; Ascending=&quot;FALSE&quot;&gt;&lt;/FieldRef&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ParameterBindings&gt;&lt;ParameterBinding Name=&quot;AddNewAnnouncement&quot; Location=&quot;Resource(wss,addnewitem)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncements&quot; Location=&quot;Resource(wss,noXinviewofY_LIST)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncementsHowTo&quot; Location=&quot;Resource(wss,noXinviewofY_ONET_HOME)&quot; /&gt;&lt;/ParameterBindings&gt;&lt;/View&gt;&lt;View BaseViewID=&quot;1&quot; Type=&quot;HTML&quot; WebPartZoneID=&quot;Main&quot; DisplayName=&quot;$Resources:core,objectiv_schema_mwsidcamlidC24;&quot; DefaultView=&quot;TRUE&quot; MobileView=&quot;TRUE&quot; MobileDefaultView=&quot;TRUE&quot; SetupPath=&quot;pages\viewpage.aspx&quot; ImageUrl=&quot;/_layouts/15/images/generic.png?rev=23&quot; Url=&quot;AllItems.aspx&quot;&gt;&lt;Toolbar Type=&quot;Standard&quot; /&gt;&lt;XslLink Default=&quot;TRUE&quot;&gt;main.xsl&lt;/XslLink&gt;&lt;JSLink&gt;clienttemplates.js&lt;/JSLink&gt;&lt;RowLimit Paged=&quot;TRUE&quot;&gt;30&lt;/RowLimit&gt;&lt;ViewFields&gt;&lt;FieldRef Name=&quot;LinkTitle&quot;&gt;&lt;/FieldRef&gt;&lt;/ViewFields&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;ID&quot;&gt;&lt;/FieldRef&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ParameterBindings&gt;&lt;ParameterBinding Name=&quot;NoAnnouncements&quot; Location=&quot;Resource(wss,noXinviewofY_LIST)&quot; /&gt;&lt;ParameterBinding Name=&quot;NoAnnouncementsHowTo&quot; Location=&quot;Resource(wss,noXinviewofY_DEFAULT)&quot; /&gt;&lt;/ParameterBindings&gt;&lt;/View&gt;&lt;/Views&gt;&lt;Forms&gt;&lt;Form Type=&quot;DisplayForm&quot; Url=&quot;DispForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;Form Type=&quot;EditForm&quot; Url=&quot;EditForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;Form Type=&quot;NewForm&quot; Url=&quot;NewForm.aspx&quot; SetupPath=&quot;pages\form.aspx&quot; WebPartZoneID=&quot;Main&quot; /&gt;&lt;/Forms&gt;&lt;/MetaData&gt;&lt;/List&gt;&#39;</span>
 </pre></div>
 
 <p>Add a list with title <em>Announcements</em>, baseTemplate <em>Announcements</em> in site <em>https://contoso.sharepoint.com/sites/project-x</em> with content types and versioning enabled and major version limit set to <em>50</em></p>
-<div class="codehilite"><pre><span></span>spo list add --webUrl https://contoso.sharepoint.com/sites/project-x --title Announcements --baseTemplate Announcements --contentTypesEnabled <span class="nb">true</span> --enableVersioning <span class="nb">true</span> --majorVersionLimit <span class="m">50</span>
+<div class="codehilite"><pre><span></span>m365 spo list add --webUrl https://contoso.sharepoint.com/sites/project-x --title Announcements --baseTemplate Announcements --contentTypesEnabled <span class="nb">true</span> --enableVersioning <span class="nb">true</span> --majorVersionLimit <span class="m">50</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>

@@ -2142,10 +2142,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2187,13 +2223,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2223,13 +2259,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8284,7 +8320,7 @@
 <p>Execute <code>$env:CLIMICROSOFT365_AADAPPID</code> and <code>$env:CLIMICROSOFT365_TENANT</code> to verify that the environment variables have been created correctly</p>
 </div>
 <p>If you are using Linux or macOS, you can set the environment variables using the <code>export</code> command from your terminal prompt.</p>
-<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">CLIMICROSOFT365_AADAPPID</span><span class="o">=</span>506af689-32aa-46c8-afb5-972ebf9d218a
+<div class="codehilite"><pre><span></span>m365 <span class="nb">export</span> <span class="nv">CLIMICROSOFT365_AADAPPID</span><span class="o">=</span>506af689-32aa-46c8-afb5-972ebf9d218a
 <span class="nb">export</span> <span class="nv">CLIMICROSOFT365_TENANT</span><span class="o">=</span>e8954f17-a373-4b61-b54d-45c038fe3188
 </pre></div>
 
@@ -8299,7 +8335,7 @@
 <p>You will now be prompted to consent that the custom application, <code>Custom PnP CLI for Microsoft 365</code>, can use the two permissions that we configure earlier, <code>Read items in all site collections</code> and <code>Sign you in and read your profile</code> on your behalf. Select <code>Accept</code> to consent and complete the sign-in process.</p>
 <p>Returning back to your command line, you can now verify that the sign in has been successful by executing the <code>m365 status</code> command.</p>
 <p>Finally, to test that we can indeed read SharePoint Online site collections, let's invoke the following command</p>
-<div class="codehilite"><pre><span></span>m365 spo site get --url https://trinder365dev.sharepoint.com -o json
+<div class="codehilite"><pre><span></span>m365 m365 spo site get --url https://trinder365dev.sharepoint.com -o json
 </pre></div>
 
 <p>The JSON representation of the SharePoint Online site will be returned to the console.</p>

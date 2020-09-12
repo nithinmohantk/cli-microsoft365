@@ -2139,10 +2139,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-1" type="checkbox" id="nav-4-11-1">
     
     <label class="md-nav__link" for="nav-4-11-1">
-      connector
+      app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-11-1">
+        app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pa/app/app-list/" title="app list" class="md-nav__link">
+      app list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+    
+    <label class="md-nav__link" for="nav-4-11-2">
+      connector
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-11-2">
         connector
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2184,13 +2220,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-2" type="checkbox" id="nav-4-11-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
     
-    <label class="md-nav__link" for="nav-4-11-2">
+    <label class="md-nav__link" for="nav-4-11-3">
       pcf
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-2">
+      <label class="md-nav__title" for="nav-4-11-3">
         pcf
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2220,13 +2256,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-3" type="checkbox" id="nav-4-11-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11-4" type="checkbox" id="nav-4-11-4">
     
-    <label class="md-nav__link" for="nav-4-11-3">
+    <label class="md-nav__link" for="nav-4-11-4">
       solution
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-11-3">
+      <label class="md-nav__title" for="nav-4-11-4">
         solution
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8216,7 +8252,7 @@
                 <h1 id="aad-user-get">aad user get<a class="headerlink" href="#aad-user-get" title="Permanent link">&para;</a></h1>
 <p>Gets information about the specified user</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>aad user get <span class="o">[</span>options<span class="o">]</span>
+<div class="codehilite"><pre><span></span>m365 aad user get <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
 
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
@@ -8267,15 +8303,15 @@
 <p>If the user with the specified id or user name doesn't exist, you will get a <code>Resource 'xyz' does not exist or one of its queried reference-property objects are not present.</code> error.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Get information about the user with id <em>1caf7dcd-7e83-4c3a-94f7-932a1299c844</em></p>
-<div class="codehilite"><pre><span></span>aad user get --id 1caf7dcd-7e83-4c3a-94f7-932a1299c844
+<div class="codehilite"><pre><span></span>m365 aad user get --id 1caf7dcd-7e83-4c3a-94f7-932a1299c844
 </pre></div>
 
 <p>Get information about the user with user name <em>AarifS@contoso.onmicrosoft.com</em></p>
-<div class="codehilite"><pre><span></span>aad user get --userName AarifS@contoso.onmicrosoft.com
+<div class="codehilite"><pre><span></span>m365 aad user get --userName AarifS@contoso.onmicrosoft.com
 </pre></div>
 
 <p>For the user with id <em>1caf7dcd-7e83-4c3a-94f7-932a1299c844</em> retrieve the user name, e-mail address and full name</p>
-<div class="codehilite"><pre><span></span>aad user get --id 1caf7dcd-7e83-4c3a-94f7-932a1299c844 --properties <span class="s2">&quot;userPrincipalName,mail,displayName&quot;</span>
+<div class="codehilite"><pre><span></span>m365 aad user get --id 1caf7dcd-7e83-4c3a-94f7-932a1299c844 --properties <span class="s2">&quot;userPrincipalName,mail,displayName&quot;</span>
 </pre></div>
 
 <h2 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>
