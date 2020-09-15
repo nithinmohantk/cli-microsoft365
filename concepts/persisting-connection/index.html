@@ -3774,6 +3774,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/knowledgehub/knowledgehub-remove/" title="knowledgehub remove" class="md-nav__link">
+      knowledgehub remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/knowledgehub/knowledgehub-set/" title="knowledgehub set" class="md-nav__link">
       knowledgehub set
     </a>
@@ -6927,10 +6939,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17-3" type="checkbox" id="nav-4-17-3">
     
     <label class="md-nav__link" for="nav-4-17-3">
-      status
+      service
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-17-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/tenant/service/message/message-list/" title="service message list" class="md-nav__link">
+      service message list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17-4" type="checkbox" id="nav-4-17-4">
+    
+    <label class="md-nav__link" for="nav-4-17-4">
+      status
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-17-4">
         status
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8283,7 +8331,7 @@
 <h2 id="persisting-connection-information-in-cli-for-microsoft-365">Persisting connection information in CLI for Microsoft 365<a class="headerlink" href="#persisting-connection-information-in-cli-for-microsoft-365" title="Permanent link">&para;</a></h2>
 <p>When you log in to Microsoft 365 in the CLI for Microsoft 365, the CLI will persist the information about the connection for future reuse. For the established connection, the CLI for Microsoft 365 persists the refresh token as well as all access tokens obtained when using the different CLI commands.</p>
 <p>Depending on the CLI for Microsoft 365 commands you have used, the CLI might persist some additional information. For example, when using commands that interact with SharePoint Online, the CLI will store the URL of your SharePoint Online tenant as well as its ID.</p>
-<p>The CLI for Microsoft 365 stores its connection information in a JSON file located in the home directory of the current user, on MacOS and Linux, this is <code>~/.o365cli-tokens.json</code> and on Windows, this is <code>&lt;root&gt;\Users\&lt;username&gt;\.o365cli-tokens.json</code>. The contents of this file are not encrypted.</p>
+<p>The CLI for Microsoft 365 stores its connection information in a JSON file located in the home directory of the current user, on MacOS and Linux, this is <code>~/.cli-m365-tokens.json</code> and on Windows, this is <code>&lt;root&gt;\Users\&lt;username&gt;\.cli-m365-tokens.json</code>. The contents of this file are not encrypted.</p>
 <h2 id="removing-persisted-connection-information">Removing persisted connection information<a class="headerlink" href="#removing-persisted-connection-information" title="Permanent link">&para;</a></h2>
 <p>CLI for Microsoft 365 persists its connection information until you either explicitly log out from the particular service or manually remove the stored credentials.</p>
 <p>To check if you are logged in to Microsoft 365 in the CLI for Microsoft 365, run the <code>status</code> command. If you are logged in, the command will return the name of the user account or AAD application used to log in. If you are not connected, the command will return <code>false</code>.</p>

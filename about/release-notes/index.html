@@ -3774,6 +3774,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/knowledgehub/knowledgehub-remove/" title="knowledgehub remove" class="md-nav__link">
+      knowledgehub remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/knowledgehub/knowledgehub-set/" title="knowledgehub set" class="md-nav__link">
       knowledgehub set
     </a>
@@ -6927,10 +6939,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17-3" type="checkbox" id="nav-4-17-3">
     
     <label class="md-nav__link" for="nav-4-17-3">
-      status
+      service
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-17-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/tenant/service/message/message-list/" title="service message list" class="md-nav__link">
+      service message list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17-4" type="checkbox" id="nav-4-17-4">
+    
+    <label class="md-nav__link" for="nav-4-17-4">
+      status
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-17-4">
         status
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -10580,9 +10628,17 @@
                 <h1 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
 <h2 id="v310"><a href="https://github.com/pnp/cli-microsoft365/releases/tag/v3.1.0">v3.1.0</a><a class="headerlink" href="#v310" title="Permanent link">&para;</a></h2>
 <h3 id="new-commands">New commands<a class="headerlink" href="#new-commands" title="Permanent link">&para;</a></h3>
+<p><strong>Microsoft 365:</strong></p>
+<ul>
+<li><a href="../cmd/tenant/service/service-message-list.md">tenant service message list</a> - gets service messages Microsoft 365 <a href="https://github.com/pnp/cli-microsoft365/issues/1741">#1741</a></li>
+</ul>
 <p><strong>Power Apps:</strong></p>
 <ul>
 <li><a href="../../cmd/pa/app/app-list/">pa app list</a> - lists all Power Apps apps <a href="https://github.com/pnp/cli-microsoft365/issues/1789">#1789</a></li>
+</ul>
+<p><strong>SharePoint:</strong></p>
+<ul>
+<li><a href="../../cmd/spo/knowledgehub/knowledgehub-remove/">spo knowledgehub remove</a> - removes the Knowledge Hub Site setting for your tenant <a href="https://github.com/pnp/cli-microsoft365/issues/1577">#1577</a></li>
 </ul>
 <h3 id="changes">Changes<a class="headerlink" href="#changes" title="Permanent link">&para;</a></h3>
 <ul>
@@ -10593,6 +10649,7 @@
 <li>fixed long running copy and move operations <a href="https://github.com/pnp/cli-microsoft365/issues/1698">#1698</a></li>
 <li>added 'm365' alias to examples in docs and help <a href="https://github.com/pnp/cli-microsoft365/issues/1694">#1694</a></li>
 <li>added support for parsing JSON with BOM to 'spfx project upgrade' <a href="https://github.com/pnp/cli-microsoft365/issues/1723">#1723</a></li>
+<li>renamed token file use the new CLI name <a href="https://github.com/pnp/cli-microsoft365/pull/1810">#1810</a></li>
 </ul>
 <h2 id="v300"><a href="https://github.com/pnp/cli-microsoft365/releases/tag/v3.0.0">v3.0.0</a><a class="headerlink" href="#v300" title="Permanent link">&para;</a></h2>
 <h3 id="new-commands_1">New commands<a class="headerlink" href="#new-commands_1" title="Permanent link">&para;</a></h3>
