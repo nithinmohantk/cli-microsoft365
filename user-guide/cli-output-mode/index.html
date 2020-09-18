@@ -2023,10 +2023,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-10-2" type="checkbox" id="nav-4-10-2">
     
     <label class="md-nav__link" for="nav-4-10-2">
-      report
+      message
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-4-10-2">
+        message
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/outlook/message/message-list/" title="message list" class="md-nav__link">
+      message list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/outlook/message/message-move/" title="message move" class="md-nav__link">
+      message move
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-10-3" type="checkbox" id="nav-4-10-3">
+    
+    <label class="md-nav__link" for="nav-4-10-3">
+      report
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-10-3">
         report
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -7090,7 +7138,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/tenant/service/message/message-list/" title="service message list" class="md-nav__link">
+    <a href="../../cmd/tenant/service/service-message-list/" title="service message list" class="md-nav__link">
       service message list
     </a>
   </li>
@@ -8437,13 +8485,13 @@
 <p>By default, all commands in CLI for Microsoft 365 present their output as plain-text. Depending on the command output, the value is presented as-is or formatted for readability.</p>
 <h3 id="simple-values">Simple values<a class="headerlink" href="#simple-values" title="Permanent link">&para;</a></h3>
 <p>If the command output is a simple value, such as a number, boolean or a string, the value is returned as-is. For example, if the Microsoft 365 Public CDN is enabled on the currently connected tenant, executing the <code>spo cdn get</code> command, will return <code>true</code>:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo cdn get
+<div class="codehilite"><pre><span></span>$ m365 spo cdn get
 <span class="nb">true</span>
 </pre></div>
 
 <h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h3>
 <p>If the command returns information about an object such as a site, list or an app, that contains a number of properties, the output in text mode is formatted as key-value pairs. For example, getting information about a specific app, will return output similar to:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app get -i e6362993-d4fd-4c5a-8254-fd095a7291ad
+<div class="codehilite"><pre><span></span>$ m365 spo app get -i e6362993-d4fd-4c5a-8254-fd095a7291ad
 AppCatalogVersion     : <span class="m">1</span>.0.0.0
 CanUpgrade            : <span class="nb">false</span>
 CurrentVersionDeployed: <span class="nb">false</span>
@@ -8456,7 +8504,7 @@ Title                 : spfx-140-online-client-side-solution
 
 <h3 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h3>
 <p>If the command returns information about multiple objects, the output is formatted as a table. For example, getting the list of available app, will return output similar to:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app list
+<div class="codehilite"><pre><span></span>$ m365 spo app list
 Title                                 ID                                    Deployed  AppCatalogVersion
 ------------------------------------  ------------------------------------  --------  -----------------
 spfx-140-online-client-side-solution  e6362993-d4fd-4c5a-8254-fd095a7291ad  <span class="nb">false</span>     <span class="m">1</span>.0.0.0
@@ -8464,7 +8512,7 @@ spfx-134-client-side-solution         5ae74650-b00b-46a9-925f-9c9bd70a0cb6  <spa
 </pre></div>
 
 <p>If only one app is returned, it will be displayed as key-value pairs:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app list
+<div class="codehilite"><pre><span></span>$ m365 spo app list
 AppCatalogVersion: <span class="m">1</span>.0.0.0
 Deployed         : <span class="nb">false</span>
 ID               : e6362993-d4fd-4c5a-8254-fd095a7291ad
@@ -8475,13 +8523,13 @@ Title            : spfx-140-online-client-side-solution
 <p>Optionally, you can have all CLI for Microsoft 365 commands return their output as JSON strings. This is invaluable when building scripts using the CLI, where the output of one command, has to be processed by another command.</p>
 <h3 id="simple-values_1">Simple values<a class="headerlink" href="#simple-values_1" title="Permanent link">&para;</a></h3>
 <p>Simple values in JSON output, are returned as-is. For example, if the Microsoft 365 Public CDN is enabled on the currently connected tenant, executing the <code>spo cdn get</code> command, will return <code>true</code>:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo cdn get -o json
+<div class="codehilite"><pre><span></span>$ m365 spo cdn get -o json
 <span class="nb">true</span>
 </pre></div>
 
 <h3 id="objects_1">Objects<a class="headerlink" href="#objects_1" title="Permanent link">&para;</a></h3>
 <p>If the command returns an object, that object will be formatted as a JSON string. For example, getting information about a specific app, will return output similar to:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app get -i e6362993-d4fd-4c5a-8254-fd095a7291ad
+<div class="codehilite"><pre><span></span>$ m365 spo app get -i e6362993-d4fd-4c5a-8254-fd095a7291ad
 <span class="o">{</span>
   <span class="s2">&quot;AppCatalogVersion&quot;</span>: <span class="s2">&quot;1.0.0.0&quot;</span>,
   <span class="s2">&quot;CanUpgrade&quot;</span>: false,
@@ -8496,7 +8544,7 @@ Title            : spfx-140-online-client-side-solution
 
 <h3 id="arrays_1">Arrays<a class="headerlink" href="#arrays_1" title="Permanent link">&para;</a></h3>
 <p>If the command returns information about multiple objects, the command will return a JSON array with each array item representing one object. For example, getting the list of available app, will return output similar to:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app list -o json
+<div class="codehilite"><pre><span></span>$ m365 spo app list -o json
 <span class="o">[</span>
   <span class="o">{</span>
     <span class="s2">&quot;AppCatalogVersion&quot;</span>: <span class="s2">&quot;1.0.0.0&quot;</span>,
@@ -8522,7 +8570,7 @@ Title            : spfx-140-online-client-side-solution
 </pre></div>
 
 <p>Even if the array contains only one item, for consistency it will be returned as a one-element JSON array:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo app list -o json
+<div class="codehilite"><pre><span></span>$ m365 spo app list -o json
 <span class="o">[</span>
   <span class="o">{</span>
     <span class="s2">&quot;AppCatalogVersion&quot;</span>: <span class="s2">&quot;1.0.0.0&quot;</span>,
@@ -8546,7 +8594,7 @@ Title            : spfx-140-online-client-side-solution
 <h2 id="processing-command-output-with-jmespath">Processing command output with JMESPath<a class="headerlink" href="#processing-command-output-with-jmespath" title="Permanent link">&para;</a></h2>
 <p>CLI for Microsoft 365 supports filtering, sorting and querying data returned by its commands using <a href="http://jmespath.org/">JMESPath</a> queries. Queries can be specified using the <code>--query</code> option on each command and are applied just before the data retrieved by the command is sent to the console. While you can apply JMESPath queries in all output modes, they are the most powerful in combination with JSON output where the data is unfiltered and the complete data set is sent to output.</p>
 <p>For example, you can retrieve the list of all SharePoint site collections in your tenant, by executing:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo site list
+<div class="codehilite"><pre><span></span>$ m365 spo site list
 Title                                Url
 -----------------------------------  -------------------------------------------------------------------------
 Digital Initiative Public Relations  https://contoso.sharepoint.com/sites/DigitalInitiativePublicRelations
@@ -8558,7 +8606,7 @@ Sales and Marketing                  https://contoso.sharepoint.com/sites/SalesA
 </pre></div>
 
 <p>To retrieve information only about sites matching a specific title or URL, you could execute:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo site list --query <span class="s2">&quot;[?Title == &#39;Retail&#39;]&quot;</span>
+<div class="codehilite"><pre><span></span>$ m365 spo site list --query <span class="s2">&quot;[?Title == &#39;Retail&#39;]&quot;</span>
 Title: Retail
 Url  : https://contoso.sharepoint.com/sites/Retail
 </pre></div>
@@ -8568,12 +8616,12 @@ Url  : https://contoso.sharepoint.com/sites/Retail
 <p>Please note, that because you haven't specified the output mode, the command uses its default text output mode and you can only query the <code>Title</code> and <code>Url</code> properties of each site, because only these properties are returned by the command in the text output mode.</p>
 </div>
 <p>If you wanted to find site collections using a specific site template, you would switch to the JSON output mode, to get access to all retrieved information, and apply the query to the returned data:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo site list --output json --query <span class="s2">&quot;[?Template == &#39;GROUP#0&#39;].{Title: Title, Url: Url}&quot;</span>
+<div class="codehilite"><pre><span></span>$ m365 spo site list --output json --query <span class="s2">&quot;[?Template == &#39;GROUP#0&#39;].{Title: Title, Url: Url}&quot;</span>
 <span class="o">[{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Mark 8 Project Team&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/Mark8ProjectTeam&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Operations&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/operations&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Digital Initiative Public Relations&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/DigitalInitiativePublicRelations&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Retail&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/Retail&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Leadership Team&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/leadership&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;Title&quot;</span>:<span class="s2">&quot;Sales and Marketing&quot;</span>,<span class="s2">&quot;Url&quot;</span>:<span class="s2">&quot;https://contoso.sharepoint.com/sites/SalesAndMarketing&quot;</span><span class="o">}]</span>
 </pre></div>
 
 <p>To make the output more readable, you could pass it to a JSON processor such as <a href="https://stedolan.github.io/jq/">jq</a>:</p>
-<div class="codehilite"><pre><span></span>m365 $ m365 spo site list --output json --query <span class="s2">&quot;[?Template == &#39;GROUP#0&#39;].{Title: Title, Url: Url}&quot;</span> <span class="p">|</span> jq
+<div class="codehilite"><pre><span></span>$ m365 spo site list --output json --query <span class="s2">&quot;[?Template == &#39;GROUP#0&#39;].{Title: Title, Url: Url}&quot;</span> <span class="p">|</span> jq
 <span class="o">[</span>
   <span class="o">{</span>
     <span class="s2">&quot;Title&quot;</span>: <span class="s2">&quot;Mark 8 Project Team&quot;</span>,
