@@ -8413,6 +8413,7 @@
 </div>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
 <p>Deleting a site collection is by default asynchronous and depending on the current state of Microsoft 365, might take up to few minutes. If you're building a script with steps that require the site to be fully deleted, you should use the <code>--wait</code> flag. When using this flag, the <code>spo site remove</code> command will keep running until it received confirmation from Microsoft 365 that the site has been fully deleted.</p>
+<p>If the site which you have selected to remove is groupified (Modern Team Site), flags <code>--fromRecycleBin</code>, <code>--skipRecycleBin</code> and <code>--wait</code> will not be applicable</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Remove the specified site and place it in the Recycle Bin</p>
 <div class="codehilite"><pre><span></span>m365 spo site remove --url https://contoso.sharepoint.com/sites/demosite
