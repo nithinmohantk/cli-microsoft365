@@ -8585,14 +8585,14 @@
 <p>PFX files exported from a Windows key store will not work as they are protected with either a password or Active Directory account. The private key must either be exported from the protected .pfx or newly created using 3rd party tools like OpenSSL (https://www.openssl.org/).</p>
 </div>
 <p>Create a new self signed certificate:</p>
-<div class="codehilite"><pre><span></span>m365 openssl req -x509 -sha256 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout privateKey.key -out certificate.cer
+<div class="codehilite"><pre><span></span>openssl req -x509 -sha256 -nodes -days <span class="m">365</span> -newkey rsa:2048 -keyout privateKey.key -out certificate.cer
 </pre></div>
 <p>Create a new Personal Information Exchange (.pfx) file</p>
 <div class="codehilite"><pre><span></span>openssl pkcs12 -export -out protected.pfx -inkey privateKey.key -in certificate.cer -password pass:&quot;pass@word1&quot;
 </pre></div>
 <p>At this point the <code>protected.pfx</code> file can be used to log in the CLI for Microsoft 365 following the instructions above for logging in using a .pfx file.</p>
 <p>If login with the .pfx file does not work then extract the private key from a protected .pfx and unprotect it:</p>
-<div class="codehilite"><pre><span></span>m365 openssl pkcs12 -in protected.pfx -out privateKeyWithPassphrase.pem -nodes
+<div class="codehilite"><pre><span></span>openssl pkcs12 -in protected.pfx -out privateKeyWithPassphrase.pem -nodes
 </pre></div>
 <p>At this point the <code>privateKeyWithPassphrase.pem</code> file can be used to log in the CLI for Microsoft 365 following the instructions above for logging in using a PEM certificate.</p>
 <h3 id="check-login-status">Check login status<a class="headerlink" href="#check-login-status" title="Permanent link">&para;</a></h3>
