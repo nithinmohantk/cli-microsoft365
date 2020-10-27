@@ -588,6 +588,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cmd/aad/approleassignment/approleassignment-remove/" title="approleassignment remove" class="md-nav__link">
+      approleassignment remove
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -6882,6 +6894,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../cmd/teams/user/user-app-list/" title="user app list" class="md-nav__link">
+      user app list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../cmd/teams/user/user-app-remove/" title="user app remove" class="md-nav__link">
       user app remove
     </a>
@@ -8196,6 +8220,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../remove-personal-app/" title="Remove a Microsoft Teams personal app" class="md-nav__link">
+      Remove a Microsoft Teams personal app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../remove-wikitab-teams/" title="Remove Wiki tab in a Microsoft Teams channel" class="md-nav__link">
       Remove Wiki tab in a Microsoft Teams channel
     </a>
@@ -8353,7 +8389,7 @@
       <span class="k">if</span> <span class="p">(</span><span class="nv">$_</span> <span class="o">-notmatch</span> <span class="s2">&quot;.zip&quot;</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">throw</span> <span class="s2">&quot;The file specified in the path argument must be a zip&quot;</span>
       <span class="p">}</span>
-      <span class="k">return</span> <span class="nv">$true</span> 
+      <span class="k">return</span> <span class="nv">$true</span>
     <span class="p">})]</span>
   <span class="no">[System.IO.FileInfo]</span><span class="nv">$AppManifestPath</span><span class="p">,</span>
   <span class="no">[string]</span><span class="nv">$AppId</span><span class="p">,</span>
@@ -8396,23 +8432,34 @@
   <span class="nv">$connectedAs</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">status</span> <span class="n">-o</span> <span class="n">json</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
   <span class="nv">$user</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">aad</span> <span class="n">user</span> <span class="n">get</span> <span class="p">-</span><span class="n">-userName</span> <span class="nv">$connectedAs</span><span class="p">.</span><span class="n">connectedAs</span> <span class="n">-o</span> <span class="n">json</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
 
-  <span class="c"># Adding the app to the personal apps of the specified user</span>
-  <span class="nv">$result</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">teams</span> <span class="n">user</span> <span class="n">app</span> <span class="n">add</span> <span class="p">-</span><span class="n">-appId</span> <span class="nv">$app</span><span class="p">.</span><span class="n">id</span> <span class="p">-</span><span class="n">-userId</span> <span class="nv">$user</span><span class="p">.</span><span class="n">id</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">-eq</span> <span class="s2">&quot;Error: Conflict&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Write-Warning</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; is already deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span> <span class="p">}</span>
-  <span class="nb">Write-Host</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; was deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$Users</span> <span class="p">+=</span> <span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span>
+  <span class="p">}</span>
 <span class="p">}</span>  
 
 <span class="nv">$user</span> <span class="p">=</span> <span class="nv">$null</span>
-<span class="nv">$Users</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
-  <span class="c"># Getting the specified user</span>
-  <span class="nv">$user</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">aad</span> <span class="n">user</span> <span class="n">get</span> <span class="p">-</span><span class="n">-userName</span> <span class="nv">$_</span> <span class="n">-o</span> <span class="n">json</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$Users</span><span class="p">.</span><span class="n">Length</span> <span class="o">-gt</span> <span class="n">0</span> <span class="o">-and</span> <span class="nv">$Install</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$Users</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+    <span class="c"># Getting the specified user</span>
+    <span class="nv">$user</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">aad</span> <span class="n">user</span> <span class="n">get</span> <span class="p">-</span><span class="n">-userName</span> <span class="nv">$_</span> <span class="n">-o</span> <span class="n">json</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
 
-  <span class="c"># Adding the app to the personal apps of the specified user</span>
-  <span class="nv">$result</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">teams</span> <span class="n">user</span> <span class="n">app</span> <span class="n">add</span> <span class="p">-</span><span class="n">-appId</span> <span class="nv">$app</span><span class="p">.</span><span class="n">id</span> <span class="p">-</span><span class="n">-userId</span> <span class="nv">$user</span><span class="p">.</span><span class="n">id</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$userApp</span> <span class="p">=</span> <span class="n">m365</span> <span class="n">teams</span> <span class="n">user</span> <span class="n">app</span> <span class="n">list</span> <span class="p">-</span><span class="n">-userId</span> <span class="nv">$user</span><span class="p">.</span><span class="n">id</span> <span class="p">-</span><span class="n">-query</span> <span class="s2">&quot;[?appId == &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39;]&quot;</span> <span class="n">-o</span> <span class="n">json</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
 
-  <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">-eq</span> <span class="s2">&quot;Error: Conflict&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Write-Warning</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; is already deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span> <span class="p">}</span>
-  <span class="nb">Write-Host</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; was deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$userApp</span><span class="p">.</span><span class="n">Length</span> <span class="o">-eq</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c"># Adding the app to the personal apps of the specified user</span>
+        <span class="n">m365</span> <span class="n">teams</span> <span class="n">user</span> <span class="n">app</span> <span class="n">add</span> <span class="p">-</span><span class="n">-appId</span> <span class="nv">$app</span><span class="p">.</span><span class="n">id</span> <span class="p">-</span><span class="n">-userId</span> <span class="nv">$user</span><span class="p">.</span><span class="n">id</span>
+        <span class="nb">Write-Host</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; was deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span>
+
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="nb">Write-Warning</span> <span class="s2">&quot;The App &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">displayName</span><span class="p">)</span><span class="s2">&#39; with ID &#39;</span><span class="p">$(</span><span class="nv">$app</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="s2">&#39; is already deployed to user &#39;</span><span class="p">$(</span><span class="nv">$user</span><span class="p">.</span><span class="n">userPrincipalName</span><span class="p">)</span><span class="s2">&#39;.&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="nb">Write-Warning</span> <span class="s2">&quot;The user &#39;$_&#39; was not found&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div></div>
 </div>
