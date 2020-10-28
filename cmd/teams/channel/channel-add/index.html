@@ -8448,8 +8448,10 @@
 <dl>
 <dt><code>-h, --help</code></dt>
 <dd>output usage information</dd>
-<dt><code>-i, --teamId &lt;teamId&gt;</code></dt>
-<dd>The ID of the team to add the channel to</dd>
+<dt><code>-i, --teamId [teamId]</code></dt>
+<dd>The ID of the team to add the channel to. Specify either <code>teamId</code> or <code>teamName</code> but not both</dd>
+<dt><code>--teamName [teamName]</code></dt>
+<dd>The display name of the team to add the channel to. Specify either <code>teamId</code> or <code>teamName</code> but not both</dd>
 <dt><code>-n, --name &lt;name&gt;</code></dt>
 <dd>The name of the channel to add</dd>
 <dt><code>-d, --description [description]</code></dt>
@@ -8466,8 +8468,11 @@
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
 <p>You can only add a channel to the Microsoft Teams team you are a member of.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p>Add channel to the specified Microsoft Teams team</p>
-<div class="codehilite"><pre><span></span>m365 teams channel add --teamId 6703ac8a-c49b-4fd4-8223-28f0ac3a6402 --name office365cli --description development
+<p>Add channel to the specified Microsoft Teams team with id 6703ac8a-c49b-4fd4-8223-28f0ac3a6402</p>
+<div class="codehilite"><pre><span></span>m365 teams channel add --teamId 6703ac8a-c49b-4fd4-8223-28f0ac3a6402 --name climicrosoft365 --description development
+</pre></div>
+<p>Add channel to the specified Microsoft Teams team with name <em>Team Name</em></p>
+<div class="codehilite"><pre><span></span>m365 teams channel add --teamName <span class="s2">&quot;Team Name&quot;</span> --name climicrosoft365 --description development
 </pre></div>
                 
                   
